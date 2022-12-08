@@ -1,0 +1,75 @@
+html, body{
+    height: 100%;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.container{
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.container h1{
+    color: #323232;
+    margin-bottom: 10px;
+}
+
+button{
+    position: absolute;
+    top: 49vh;
+    background: #3004f5;
+    color: white;
+    border: 0;
+    border-radius: 5px;
+    padding: 10px 40px;
+    font-size: 30px;
+    box-shadow: 0 0 4px gray;
+    display: none;
+    cursor: pointer;
+}
+
+button.active{
+    display: block;
+    animation: fade .5s
+}
+
+@keyframes fade{
+    from{
+        opacity: 0;
+    }to{
+        opacity: 1;
+    }
+}
+
+.container .grid{ 
+    place-items: center;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    padding: 10px;
+    width: 400px;
+    height: 400px;
+    border-radius: 15px;
+    box-shadow: 0 0 4px gray;
+    gap: 10px;
+}
+
+.cell{
+    box-shadow: 0 0 4px gray;
+    border-radius: 5px;
+    width: 113px;
+    height: 113px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    color: #525252;
+    transition: .5s;
+}
